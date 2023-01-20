@@ -1,0 +1,26 @@
+{% extends 'store/main.html' %}
+{% block title %}
+Login - Cyber Store
+{% endblock title %}
+
+{% block content %}
+<div style="float:center;">
+    <div class='col-lg-6'>
+        <div class="box-element">
+            <form id="form" method="POST">
+                {% csrf_token %}
+                <div class="form-field">
+                    <input required class="form-control" type="text" name="username" placeholder="Name">
+                </div>
+                <br>
+                <div class="form-field">
+                    <input required class="form-control" type="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-btn btn">
+                    <input required class="form-control" type="submit" value="Login">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
